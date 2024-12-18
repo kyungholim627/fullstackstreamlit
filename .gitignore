@@ -1,0 +1,6 @@
+env/
+.env
+.cache/
+files/
+
+.streamlit/
