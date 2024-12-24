@@ -8,9 +8,7 @@ from langchain.prompts import ChatPromptTemplate
 import streamlit as st
 import os
 
-llm = ChatOpenAI(
-    temperature=0.1,
-)
+
 
 answers_prompt = ChatPromptTemplate.from_template(
     """
@@ -143,6 +141,9 @@ with st.sidebar:
     
 if key:
     os.environ["OPENAI_API_KEY"] = key
+    llm = ChatOpenAI(
+    temperature=0.1,
+)
     st.markdown(
         """
         # SiteGPT
